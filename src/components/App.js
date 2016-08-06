@@ -1,9 +1,8 @@
 import React, { PropTypes } from 'react'
 
-import Hambuger from './components/Hambuger';
+import Hambuger from './Hambuger';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
-import injectTapEventPlugin from 'react-tap-event-plugin';
-injectTapEventPlugin();
+
 
 class App extends React.Component {
   getChildContext() {

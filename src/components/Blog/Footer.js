@@ -1,5 +1,5 @@
 import React from 'react';
-import Me from '../../images/timg.jpg';
+import Me from '../../images/timg.png';
 
 class Footer extends React.Component {
   getStyles(){
@@ -21,7 +21,7 @@ class Footer extends React.Component {
     const styles=this.getStyles();
     return(
       <div style={styles.root}>
-        <p>更多信息，请查看英雄联盟官网</p>
+        <p>更多信息，可以加微信</p>
         <img src={Me}  style={styles.img}/>
       </div>
     )

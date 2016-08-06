@@ -6,12 +6,14 @@ class Home extends React.Component {
       root:{
         width:'100vw',
         height:'100vh',
-        background: 'url("http://7xopqp.com1.z0.glb.clouddn.com/newming24.jpg") no-repeat fixed center center/cover'
+        background: 'url("https://raw.githubusercontent.com/taken1994/big-demo/master/src/images/1982774_190125031_2.jpg") no-repeat fixed center center/cover'
       },
       title:{
         color:'#fff',
         textAlign:'center',
-        paddingTop:'30%'
+        paddingTop:'30%',
+        fontSize:'50px',
+        fontWeight:'bold'
       }
     }
     return(
