@@ -14,11 +14,22 @@ class Home extends React.Component {
         paddingTop:'30%',
         fontSize:'50px',
         fontWeight:'bold'
+      },
+      span:{
+      color:'#00BCD4',
+      fontSize:'36px'
+      },
+      cover:{
+        width:'100%',
+        height:'100%',
+        backgroundColor:'rgba(0,0,0,0.5)'
       }
     }
     return(
       <div style={styles.root}>
-        <h1 style={styles.title}>欢迎光临</h1>
+        <div style={styles.cover}>
+          <h1 style={styles.title}>欢迎光临<br/><span style={styles.span}>TAKEN SPACE</span></h1>
+        </div>
       </div>
     )
   }
