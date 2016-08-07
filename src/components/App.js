@@ -1,6 +1,7 @@
 import React, { PropTypes } from 'react'
 
 import Hambuger from './Hambuger';
+import Footer from './Footer';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 
 
@@ -11,10 +12,9 @@ class App extends React.Component {
   render () {
     return(
       <div>
-        <div style={{position:'absolute'}}>
-          <Hambuger />
-        </div>
+        <Hambuger />
         {this.props.children}
+        <Footer />
       </div>
     )
   }

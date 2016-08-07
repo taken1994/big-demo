@@ -1,5 +1,4 @@
 import React from 'react';
-import Me from '../../images/timg.png';
 
 class Footer extends React.Component {
   getStyles(){
@@ -19,6 +18,7 @@ class Footer extends React.Component {
   };
   render () {
     const styles=this.getStyles();
+    let Me=`https://raw.githubusercontent.com/taken1994/big-demo/master/src/images/timg.png`
     return(
       <div style={styles.root}>
         <p>更多信息，可以加微信</p>

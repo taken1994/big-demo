@@ -5,7 +5,6 @@ import {Card} from 'material-ui/Card';
 import UserInfo from './UserInfo';
 import Repos from './Repos';
 import github from './github';
-import Footer from '../Blog/Footer';
 
 class About extends React.Component {
   constructor(props) {
@@ -47,7 +46,6 @@ class About extends React.Component {
             </div>
           }
         </Card>
-        <Footer/>
       </div>
     )
   }
