@@ -1,25 +1,89 @@
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-.clearfix:before,
-.clearfix:after {
-  content: " ";
-  display: table;
-}
-.clearfix:after {
-  clear: both;
+html {
+  font-family: sans-serif;
+  background-color: #fafafa;
 }
 
-body{
+* {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
   -webkit-font-smoothing: antialiased;
-  font-family: "Helvetica Neue", "Segoe UI", Helvetica, Arial, "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+  color: #727272;
 }
-.card{
-  transition: all 1s ease;
-  box-shadow: 4px 6px 5px 0 rgba(0, 0, 0, 0.16), 4px 6px 10px 0 rgba(0, 0, 0, 0.12);
+ul {
+  padding: 0;
+  list-style-type: none;
 }
-.card:hover{
-  box-shadow: 5px 8px 10px 0 rgba(0, 0, 0, 0.16), 5px 8px 20px 0 rgba(0, 0, 0, 0.12);
+
+h1 {
+  margin: 0;
+}
+
+.account {
+  flex-grow: 1;
+  overflow-y: scroll;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+.account .content {
+  max-width: 700px;
+  margin: 20px auto;
+  padding: 40px;
+  margin-top: 100px;
+}
+
+.account .user-info img {
+  display: block;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin: 30px auto;
+}
+.account .user-info ul {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+}
+.account .user-info ul li {
+  flex-grow: 1;
+  border-left: 1px solid rgba(0,0,0,0.1);
+}
+.account .user-info ul li:first-child {
+  border-left: none;
+}
+.account .user-info  span {
+  display: block;
+  font-size: 14px;
+}
+.account .user-info  b {
+  display: block;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+.account .user-repos {
+  margin-top: 50px;
+  margin-bottom: 30px;
+  border-top: 1px solid rgba(0,0,0,0.1);
+}
+.account .user-repos  li {
+      border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+.account .user-repos  li  div {
+  display: flex;
+  justify-content: space-between;
+}
+.account .user-repos li .name {
+  font-size: 16px;
+  font-weight: 500;
+  color: #00bcd4;
+}
+.account .user-repos li  .desc {
+  font-size: 15px;
+}
+.account .user-repos li  .lang {
+  font-size: 14px;
 }

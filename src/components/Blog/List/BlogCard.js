@@ -1,44 +1,35 @@
 import React, { Component } from 'react';
-import '../../style/common.css';
 
 class BlogCard extends Component {
   render(){
     let styles={
-    root:{
+      root:{
         width:'80%',
-        height:'90px',
-        margin:'30px auto',
-        maxWidth:'800px'
+        height:'100px',
+        margin:'10px auto',
+        boxShadow: '0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12)',
       },
-      left:{
+      index:{
         float:'left',
-        color:'#fff',
-        backgroundColor:'#00BCD4',
-        lineHeight:'90px',
+        width:'80px',
+        height:'100px',
         textAlign:'center',
-        width:'12%',
-        fontSize:'24px',
-        fontWeight:'700'
+        backgroundColor:'#00bcd4',
+        color:'#fff',
+        lineHeight:'100px'
       },
-      right:{
+      content:{
         float:'left',
-        paddingLeft:'20px',
-        color:'#777'
-      },
-      h3:{
-        lineHeight:'56px'
-      },
-      p:{
-        opacity:'0.8'
-        // 设置透明度
+        color:'#777',
+        paddingLeft:'25px'
       }
     }
     return(
       <div style={styles.root} className="card">
-        <div style={styles.left}>{this.props.index}</div>
-        <div style={styles.right}>
-          <h3 style={styles.h3}>{this.props.title}</h3>
-          <p style={styles.p}>{this.props.data}</p>
+        <div style={styles.index}>{this.props.index}</div>
+        <div style={styles.content}>
+          <h3>{this.props.title}</h3>
+          <p>{this.props.data}</p>
         </div>
       </div>
     )

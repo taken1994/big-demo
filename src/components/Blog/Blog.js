@@ -4,7 +4,6 @@ import Footer from './Footer';
 import List from './List/List';
 import Header from './Header/Header';
 
-import '../style/common.css';
 
 
 class Blog extends React.Component {

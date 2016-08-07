@@ -5,6 +5,7 @@ import {Card} from 'material-ui/Card';
 import UserInfo from './UserInfo';
 import Repos from './Repos';
 import github from './github';
+import Footer from '../Blog/Footer';
 
 class About extends React.Component {
   constructor(props) {
@@ -27,24 +28,18 @@ class About extends React.Component {
     }
   render () {
     let styles={
-      root:{
-        backgroundColor:'#00bcd4',
-        height:'75px',
-        width:'100%'
-      },
       cir:{
         textAlign:'center'
       }
     }
     return(
       <div className='account'>
-        <div style={styles.root}></div>
         <Card className="content" >
           {
             this.state.wait ?
             <div style={styles.cir}>
               <CircularProgress />
-              <h1>连接GITHUB中 . . .</h1>
+              <h1>连接服务器，调用数据中 . . .</h1>
             </div>:
             <div>
               <UserInfo userInfo={this.state.user} />
@@ -52,6 +47,7 @@ class About extends React.Component {
             </div>
           }
         </Card>
+        <Footer/>
       </div>
     )
   }

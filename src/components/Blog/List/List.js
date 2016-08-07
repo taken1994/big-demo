@@ -2,12 +2,15 @@ import React from 'react';
 import map from 'lodash/fp/map';
 import BlogCard from './BlogCard'
 import axios from 'axios'
+import CircularProgress from 'material-ui/CircularProgress';
+
 
 class List extends React.Component {
   constructor(){
     super();
     this.state={
-      posts: ''
+      posts: '',
+      wait:true
     }
   }
   componentDidMount(){
@@ -16,11 +19,17 @@ class List extends React.Component {
     axios.get(address).then((res) => {
         console.log(res);
         this.setState({
-          posts: res.data
+          posts: res.data,
+          wait:false
         });
       });
     }
   render () {
+    let styles={
+      cir:{
+        textAlign:'center'
+      }
+    }
     let List=[]
     if (this.props.search == '') {
       map((b) => {List.push(
@@ -28,7 +37,7 @@ class List extends React.Component {
     }else {
       let query=new RegExp(this.props.search,"i");
       for(let i=0;i<this.state.posts.length;i++){
-        if (query.test(this.state.posts[i].title)) {
+        if (query.test(this.state.posts[i].title)||query.test(this.state.posts[i].index)) {
           List.push(
             <BlogCard title={this.state.posts[i].title}
               date={this.state.posts[i].date}
@@ -39,9 +48,14 @@ class List extends React.Component {
       }
     }
     return(
-      <div>
-        {List}
-      </div>
+          this.state.wait ?
+          <div style={styles.cir}>
+            <CircularProgress />
+            <h1>连接GITHUB中 . . .</h1>
+          </div>:
+          <div>            
+            {List}
+          </div>
     )
   }
 }

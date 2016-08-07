@@ -1,6 +1,5 @@
 import React from 'react'
-import IconButton from 'material-ui/IconButton';
-import MenuButton from 'material-ui/svg-icons/navigation/menu';
+import AppBar from 'material-ui/AppBar';
 import Drawer from 'material-ui/Drawer';
 import MenuItem from 'material-ui/MenuItem';
 import { Link } from 'react-router';
@@ -17,19 +16,14 @@ class Hambuger extends React.Component {
   render () {
     let styles={
       icon:{
-        marginTop:'10px',
-        marginLeft:'10px',
-        width: '52px',
-        height: '52px',
-      },
-      svg: {
-        width: '32px',
-        height: '32px',
+        boxShadow:'0',
+        width:'100vw',
       },
       title:{
+        marginTop:'0px',
         color:'#fff',
         fontSize:'32px',
-        lineHeight:'64px',
+        lineHeight:'70px',
         textAlign:'center',
         backgroundColor:'#00BCD4',
         marginBottom:'20px'
@@ -44,11 +38,9 @@ class Hambuger extends React.Component {
     }
     return(
       <div>
-        <IconButton style={styles.icon} iconStyle={styles.svg} onTouchTap={this.handleToggle.bind(this)}>
-          <MenuButton color='#fff' hoverColor='#004D40'/>
-        </IconButton>
+        <AppBar style={styles.icon} onLeftIconButtonTouchTap={this.handleToggle.bind(this)}/>
         <Drawer docked={false} width={256} open={this.state.open} onRequestChange={this.handleToggle.bind(this)}>
-          <p style={styles.title}>TAKEN'S SPACE</p>
+          <p style={styles.title}>TAKEN SPACE</p>
           <div style={styles.menu}>
             <MenuItem onTouchTap={this.handleClose.bind(this)}><Link style={styles.line} activeStyle={{color: 'red'}} onlyActiveOnIndex={true} to='/'>首页</Link></MenuItem>
             <MenuItem onTouchTap={this.handleClose.bind(this)}><Link style={styles.line} activeStyle={{color: 'red'}} to='blog'>博客</Link></MenuItem>
