@@ -1,6 +1,11 @@
 import React, { Component } from 'react';
+import {hashHistory} from 'react-router';
 
 class BlogCard extends Component {
+  handleClick(){
+    let address=`https://raw.githubusercontent.com/taken1994/big-demo/master/posts/${this.props.params.title}.md?v=${Math.random()}`
+    hashHistory.push(address)
+  }
   render(){
     let styles={
       root:{
@@ -25,7 +30,7 @@ class BlogCard extends Component {
       }
     }
     return(
-      <div style={styles.root} className="card">
+      <div style={styles.root} className="card" onClick={this.handleClick.bind(this)}>
         <div style={styles.index}>{this.props.index}</div>
         <div style={styles.content}>
           <h3>{this.props.title}</h3>
