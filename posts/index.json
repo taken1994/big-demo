@@ -3,24 +3,24 @@
     "index":4,
     "title":"MarkDown",
     "date":"2016.8.6",
-    "title":"markdown"
+    "name":"markdown"
   },
   {
     "index":3,
     "title":"JS",
     "date":"2016.7.21",
-    "title":"js"
+    "name":"js"
   },
   {
     "index":2,
     "title":"CSS3",
     "date":"2016.7.20",
-    "title":"css"
+    "name":"css"
   },
   {
     "index":1,
     "title":"HTML5",
     "date":"2016.7.19",
-    "title":"html"
+    "name":"html"
   }
 ]

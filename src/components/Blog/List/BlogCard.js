@@ -3,7 +3,7 @@ import {hashHistory} from 'react-router';
 
 class BlogCard extends Component {
   handleClick(){
-    let address=`https://raw.githubusercontent.com/taken1994/big-demo/master/posts/${this.props.params.title}.md?v=${Math.random()}`
+    let address=`https://raw.githubusercontent.com/taken1994/big-demo/master/posts/${this.props.name}.md?v=${Math.random()}`
     hashHistory.push(address)
   }
   render(){

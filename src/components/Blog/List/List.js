@@ -33,7 +33,7 @@ class List extends React.Component {
     let List=[]
     if (this.props.search == '') {
       map((b) => {List.push(
-        <BlogCard title={b.title} date={b.date} index={b.index} key={Math.random()}/>);},this.state.posts);
+        <BlogCard title={b.title} date={b.date} index={b.index} name={b.name} key={Math.random()}/>);},this.state.posts);
     }else {
       let query=new RegExp(this.props.search,"i");
       for(let i=0;i<this.state.posts.length;i++){
@@ -42,6 +42,7 @@ class List extends React.Component {
             <BlogCard title={this.state.posts[i].title}
               date={this.state.posts[i].date}
               index={this.state.posts[i].index}
+              name={this.state.posts[i].name}
               key={Math.random()} />
           )
         }
@@ -53,7 +54,7 @@ class List extends React.Component {
             <CircularProgress />
             <h1>连接GITHUB中 . . .</h1>
           </div>:
-          <div>            
+          <div>
             {List}
           </div>
     )
