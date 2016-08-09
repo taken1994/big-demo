@@ -11,7 +11,7 @@ class Hambuger extends React.Component {
     this.state = {
       open: false,
       title: "",
-      btnColor:true
+      btnColor:false
     };
   }
 
@@ -26,8 +26,8 @@ class Hambuger extends React.Component {
   }
   setNavState(){
     this.setState({
-      btnColor: this.context.router.isActive('/', true) ? true :
-        this.context.router.isActive('/blog') ? true : false,
+      btnColor: this.context.router.isActive('/about') ? true :
+        this.context.router.isActive('/skill') ? true : false,
       title:this.context.router.isActive('/', true) ? 'HOME' :
         this.context.router.isActive('/blog')? 'BLOG' :
         this.context.router.isActive('/about')? 'ABOUT' :
@@ -70,7 +70,7 @@ class Hambuger extends React.Component {
         <IconButton tooltip="menu"
           style={styles.icon} iconStyle={styles.smallIcon}
           onTouchTap={this.handleToggle.bind(this)}>
-          {this.state.btnColor ? <Menu color='#fff'/> : <Menu color='#00BCD4'/>}
+          {this.state.btnColor ? <Menu color='#00BCD4'/> : <Menu color='#fff'/>}
         </IconButton>
         <Drawer docked={false} width={256} open={this.state.open} onRequestChange={this.handleToggle.bind(this)}>
           <p style={styles.title}>TAKEN@{this.state.title}</p>

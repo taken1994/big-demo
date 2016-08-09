@@ -2,8 +2,10 @@ import React from 'react';
 import axios from 'axios';
 import marked from 'marked';
 import CircularProgress from 'material-ui/CircularProgress';
-import {Card} from 'material-ui/Card';
+import IconButton from 'material-ui/IconButton';
+import ArrowBack from 'material-ui/svg-icons/navigation/arrow-back';
 import hljs from 'highlight.js';
+import {hashHistory} from 'react-router';
 
 
 class Post extends React.Component {
@@ -25,7 +27,10 @@ class Post extends React.Component {
         });
       });
     }
-
+  handleBack(){
+    // console.log(hashHistory);
+    hashHistory.goBack();
+  }
   render () {
     marked.setOptions({
       highlight: function (code) {
@@ -34,26 +39,43 @@ class Post extends React.Component {
     });
     let content=marked(this.state.Content)
     let styles={
+      h1:{
+        backgroundColor: 'rgb(0, 188, 212)',
+        lineHeight:'75px',
+        textAlign:'center',
+        color:'#fff',
+        boxShadow: 'rgba(0, 0, 0, 0.15) 0px 1px 6px, rgba(0, 0, 0, 0.15) 0px 1px 4px'
+      },
       cir:{
         textAlign:'center'
       },
-      root:{
-        margin:'30px auto',
-        width:'90%',
-        boxShadow: '0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12)',
-        padding:'30px',
-        marginTop:'100px'
-      }
+      smallIcon: {
+        width: 32,
+        height: 32,
+      },
+      small: {
+        width: 52,
+        height: 52,
+        padding: 10,
+        position:'absolute',
+        top:'10px',
+        right:'10px',
+      },
     }
     return(
-      this.state.wait ?
-      <div style={styles.cir}>
-        <CircularProgress />
-        <h1>连接GITHUB，提取数据中 . . .</h1>
-      </div>:
-      <Card style={styles.root}>
-        <div dangerouslySetInnerHTML={{__html: content}} />
-      </Card>
+      <div>
+        <h1 style={styles.h1}>欢迎阅读</h1>
+        <IconButton iconStyle={styles.smallIcon} style={styles.small} onClick={this.handleBack.bind(this)}>
+          <ArrowBack color='#fff' />
+        </IconButton>
+        { this.state.wait ?   <div style={styles.cir}>
+                                <CircularProgress />
+                                <h1>连接GITHUB，提取数据中 . . .</h1>
+                              </div>:"" }
+        <div className="post-content">
+          <div dangerouslySetInnerHTML={{__html: content}} />
+        </div>
+      </div>
     )
   }
 }
