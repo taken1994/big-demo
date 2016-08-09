@@ -4,12 +4,20 @@ html {
 }
 
 * {
+  margin: 0;
+  padding: 0;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: table;
+}
+.clearfix:after {
+  clear: both;
+}
 body {
-  margin: 0;
   -webkit-font-smoothing: antialiased;
   color: #727272;
 }

@@ -27,10 +27,13 @@ class Home extends React.Component {
       }
     }
     return(
-      <div style={styles.root}>
-        <div style={styles.cover}>
-          <h1 style={styles.title}>欢迎光临<br/><span style={styles.span}>TAKEN SPACE</span></h1>
+      <div>
+        <div style={styles.root}>
+          <div style={styles.cover}>
+            <h1 style={styles.title}>欢迎光临<br/><span style={styles.span}>TAKEN SPACE</span></h1>
+          </div>
         </div>
+        <h1 style={{color:'#777',textAlign:'center',lineHeight:'90px'}}>我的个人作品</h1>
         <CardList/>
       </div>
     )
