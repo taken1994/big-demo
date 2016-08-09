@@ -13,6 +13,7 @@ class Search extends React.Component {
     let styles={
       root:{
         padding:'50px 10px',
+        paddingTop:'80px',
         width:'50%',
         margin:'0 auto'
       },

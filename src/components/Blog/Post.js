@@ -1,11 +1,15 @@
 import React from 'react';
 import axios from 'axios';
 import marked from 'marked';
+import CircularProgress from 'material-ui/CircularProgress';
+import {Card} from 'material-ui/Card';
+Card
 class Post extends React.Component {
   constructor(){
     super();
     this.state={
-      Content: ''
+      Content: '',
+      wait:true
     }
   }
   componentDidMount(){
@@ -14,17 +18,35 @@ class Post extends React.Component {
     axios.get(address).then((res) => {
         console.log(res);
         this.setState({
-          Content: res.data
+          Content: res.data,
+          wait:false
         });
       });
     }
 
   render () {
-    let content=marked(this.state.Content !='' ? this.state.Content : 'loading')
+    let content=marked(this.state.Content)
+    let styles={
+      cir:{
+        textAlign:'center'
+      },
+      root:{
+        margin:'30px auto',
+        width:'90%',
+        boxShadow: '0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12)',
+        padding:'30px',
+        marginTop:'100px'
+      }
+    }
     return(
-      <div>
+      this.state.wait ?
+      <div style={styles.cir}>
+        <CircularProgress />
+        <h1>连接GITHUB，提取数据中 . . .</h1>
+      </div>:
+      <Card style={styles.root}>
         <div dangerouslySetInnerHTML={{__html: content}} />
-      </div>
+      </Card>
     )
   }
 }

@@ -5,7 +5,7 @@ class Footer extends React.Component {
     return{
       root:{
         textAlign:'center',
-        backgroundColor:'#212121',
+        backgroundColor:'#727272',
         color:"#fff",
         padding:'30px 10px'
       },

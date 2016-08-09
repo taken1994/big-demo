@@ -3,15 +3,18 @@ import {hashHistory} from 'react-router';
 
 class BlogCard extends Component {
   handleClick(){
-    let address=`https://raw.githubusercontent.com/taken1994/big-demo/master/posts/${this.props.name}.md?v=${Math.random()}`
-    hashHistory.push(address)
+
+    hashHistory.push(`blog/${this.props.name}`)
+
+    // 也可用第二种方式，删除上在一条语句，进行上下文跳转
+    // this.context.router.push(`blog/${this.props.name}`)
   }
   render(){
     let styles={
       root:{
         width:'80%',
         height:'100px',
-        margin:'10px auto',
+        margin:'20px auto',
         boxShadow: '0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12)',
       },
       index:{
@@ -55,4 +58,9 @@ BlogCard.propTypes = {
 };
 // 设置类型，不是该类型会发生警告。可设置类型为number, string, element or array
 
+
+// 也可用第二种方式，进行上下文跳转
+// BlogCard.contextTypes ={
+//   router:React.PropTypes.object.isRequired
+// }
 export default BlogCard;

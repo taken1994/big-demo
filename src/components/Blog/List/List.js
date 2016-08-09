@@ -28,6 +28,9 @@ class List extends React.Component {
     let styles={
       cir:{
         textAlign:'center'
+      },
+      root:{
+        margin:'50px auto'
       }
     }
     let List=[]
@@ -54,7 +57,7 @@ class List extends React.Component {
             <CircularProgress />
             <h1>连接GITHUB中 . . .</h1>
           </div>:
-          <div>
+          <div style={styles.root}>
             {List}
           </div>
     )

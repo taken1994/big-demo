@@ -4,7 +4,7 @@ class Home extends React.Component {
   render () {
     let styles={
       root:{
-        width:'100vw',
+        width:'100%',
         height:'100vh',
         background: 'url("https://raw.githubusercontent.com/taken1994/big-demo/master/src/images/1982774_190125031_2.jpg") no-repeat fixed center center/cover'
       },

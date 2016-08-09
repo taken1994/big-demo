@@ -33,7 +33,7 @@ class About extends React.Component {
     }
     return(
       <div className='account'>
-        <Card className="content" >
+        <Card className="content"  style={styles.root} >
           {
             this.state.wait ?
             <div style={styles.cir}>
