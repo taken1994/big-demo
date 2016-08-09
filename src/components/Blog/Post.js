@@ -3,7 +3,9 @@ import axios from 'axios';
 import marked from 'marked';
 import CircularProgress from 'material-ui/CircularProgress';
 import {Card} from 'material-ui/Card';
-Card
+import hljs from 'highlight.js';
+
+
 class Post extends React.Component {
   constructor(){
     super();
@@ -25,6 +27,11 @@ class Post extends React.Component {
     }
 
   render () {
+    marked.setOptions({
+      highlight: function (code) {
+        return hljs.highlightAuto(code).value;
+      }
+    });
     let content=marked(this.state.Content)
     let styles={
       cir:{
