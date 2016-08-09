@@ -9,7 +9,6 @@ class Cards extends Component {
       }
     }
     return(
-      <div className='work-container'>
         <a href={this.props.href} className="work-list">
           <Card className="work-card">
             <CardMedia overlay={<CardTitle title={this.props.title} subtitle={this.props.subtitle}/>} >
@@ -17,7 +16,6 @@ class Cards extends Component {
             </CardMedia>
           </Card>
         </a>
-      </div>
     )
   }
 }

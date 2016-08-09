@@ -5,7 +5,7 @@ import axios from 'axios'
 import CircularProgress from 'material-ui/CircularProgress';
 
 
-class List extends React.Component {
+class CardList extends React.Component {
   constructor(){
     super();
     this.state={
@@ -39,11 +39,11 @@ class List extends React.Component {
             <CircularProgress />
             <h1>连接GITHUB中 . . .</h1>
           </div>:
-          <div>
+          <div className='work-container'>
             {Card}
           </div>
     )
   }
 }
 
-export default List;
+export default CardList;

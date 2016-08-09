@@ -1,5 +1,5 @@
 import React, { PropTypes } from 'react'
-import CarcList from './CardList'
+import CardList from './CardList'
 
 class Home extends React.Component {
   render () {
@@ -31,7 +31,7 @@ class Home extends React.Component {
         <div style={styles.cover}>
           <h1 style={styles.title}>欢迎光临<br/><span style={styles.span}>TAKEN SPACE</span></h1>
         </div>
-        <CarcList/>
+        <CardList/>
       </div>
     )
   }
