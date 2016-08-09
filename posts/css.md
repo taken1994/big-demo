@@ -1,4 +1,4 @@
-<h1>css</h1>
+<h1 style={margin:'0 auto'}>css</h1>
 
 # css
 
