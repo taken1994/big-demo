@@ -31,7 +31,7 @@ class Hambuger extends React.Component {
       title:this.context.router.isActive('/', true) ? 'HOME' :
         this.context.router.isActive('/blog')? 'BLOG' :
         this.context.router.isActive('/about')? 'ABOUT' :
-        this.context.router.isActive('/skill')? 'Skill' : 'HOME'
+        this.context.router.isActive('/skill')? 'SKILL' : 'HOME'
     });
   }
   render () {
