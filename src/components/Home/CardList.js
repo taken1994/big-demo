@@ -1,6 +1,6 @@
 import React from 'react';
 import map from 'lodash/fp/map';
-import BlogCard from './Card'
+import Cards from './Cards'
 import axios from 'axios'
 import CircularProgress from 'material-ui/CircularProgress';
 
@@ -28,21 +28,18 @@ class List extends React.Component {
     let styles={
       cir:{
         textAlign:'center'
-      },
-      root:{
-        margin:'50px auto'
       }
     }
     let Card=[]
     map((b) => {Card.push(
-      <BlogCard title={b.title} subtitle={b.subtitle} href={b.href} src={b.src} key={Math.random()}/>);},this.state.cards);
+      <Cards title={b.title} subtitle={b.subtitle} href={b.href} src={b.src} key={Math.random()}/>);},this.state.cards);
     return(
           this.state.wait ?
           <div style={styles.cir}>
             <CircularProgress />
             <h1>连接GITHUB中 . . .</h1>
           </div>:
-          <div style={styles.root}>
+          <div>
             {Card}
           </div>
     )

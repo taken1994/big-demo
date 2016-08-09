@@ -6,6 +6,7 @@ import routes from './routes.js';
 import './style/common.css';
 import './style/hljs.css';
 import './style/post.css';
+import './style/cardlist.css';
 
 import injectTapEventPlugin from 'react-tap-event-plugin';
 injectTapEventPlugin();
