@@ -30,7 +30,8 @@ class Hambuger extends React.Component {
         this.context.router.isActive('/blog') ? true : false,
       title:this.context.router.isActive('/', true) ? 'HOME' :
         this.context.router.isActive('/blog')? 'BLOG' :
-        this.context.router.isActive('/about')? 'ABOUT' : 'HOME'
+        this.context.router.isActive('/about')? 'ABOUT' :
+        this.context.router.isActive('/skill')? 'Skill' : 'HOME'
     });
   }
   render () {
@@ -76,6 +77,7 @@ class Hambuger extends React.Component {
           <div style={styles.menu}>
             <MenuItem onTouchTap={this.handleClose.bind(this)}><Link style={styles.line} activeStyle={{color: 'red'}} onlyActiveOnIndex={true} to='/'>首页</Link></MenuItem>
             <MenuItem onTouchTap={this.handleClose.bind(this)}><Link style={styles.line} activeStyle={{color: 'red'}} to='blog'>博客</Link></MenuItem>
+            <MenuItem onTouchTap={this.handleClose.bind(this)}><Link style={styles.line} activeStyle={{color: 'red'}} to='skill'>技能</Link></MenuItem>
             <MenuItem onTouchTap={this.handleClose.bind(this)}><Link style={styles.line} activeStyle={{color: 'red'}} to='about'>关于</Link></MenuItem>
           </div>
         </Drawer>
