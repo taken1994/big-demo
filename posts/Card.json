@@ -1,36 +1,8 @@
 [
   {
-    "title":"百日百页面",
-    "subtitle":"初学前端每日笔记",
-    "href":"http://newming.github.io/100",
-    "src":"https://raw.githubusercontent.com/taken1994/big-demo/master/src/images/timg.png"
-  },
-  {
-    "title":"百日百页面",
-    "subtitle":"初学前端每日笔记",
-    "href":"http://newming.github.io/100",
-    "src":"https://raw.githubusercontent.com/taken1994/big-demo/master/src/images/timg.png"
-  },
-  {
-    "title":"百日百页面",
-    "subtitle":"初学前端每日笔记",
-    "href":"http://newming.github.io/100",
-    "src":"https://raw.githubusercontent.com/taken1994/big-demo/master/src/images/timg.png"
-  },
-  {
-    "title":"百日百页面",
-    "subtitle":"初学前端每日笔记",
-<<<<<<< HEAD
-    "href":"http://newming.github.im o/100",
-=======
-    "href":"http://newming.github.io/100",
->>>>>>> 8e0e162cfd5e99d881e9995f530aabce20ab43d0
-    "src":"https://raw.githubusercontent.com/taken1994/big-demo/master/src/images/timg.png"
-  },
-  {
-    "title":"百日百页面",
-    "subtitle":"初学前端每日笔记",
-    "href":"http://newming.github.io/100",
-    "src":"https://raw.githubusercontent.com/taken1994/big-demo/master/src/images/timg.png"
+    "title":"手机微场景",
+    "subtitle":"swiper插件，只适应于手机",
+    "href":"https://taken1994.github.io/App-propaganda/",
+    "src":"https://raw.githubusercontent.com/taken1994/App-propaganda/gh-pages/images/1-pic_07.jpg"
   }
 ]
