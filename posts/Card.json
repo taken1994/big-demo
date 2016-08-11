@@ -20,7 +20,11 @@
   {
     "title":"百日百页面",
     "subtitle":"初学前端每日笔记",
+<<<<<<< HEAD
     "href":"http://newming.github.im o/100",
+=======
+    "href":"http://newming.github.io/100",
+>>>>>>> 8e0e162cfd5e99d881e9995f530aabce20ab43d0
     "src":"https://raw.githubusercontent.com/taken1994/big-demo/master/src/images/timg.png"
   },
   {
